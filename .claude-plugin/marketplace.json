@@ -1,0 +1,16 @@
+{
+  "name": "bwlab-odoo-assistant",
+  "owner": {
+    "name": "bwlab"
+  },
+  "metadata": {
+    "description": "Plugin di bwlab per i clienti Odoo."
+  },
+  "plugins": [
+    {
+      "name": "odoo-assistant",
+      "source": "./plugins/odoo-assistant",
+      "description": "Collega Claude a Odoo (MCP) con login Odoo, inizializzazione guidata e regole d'uso."
+    }
+  ]
+}
