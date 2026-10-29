@@ -1,7 +1,7 @@
 {
   "name": "odoo-assistant",
-  "version": "0.2.0",
-  "description": "Assistente Odoo di bwlab: guida al collegamento con gli ambienti di test e produzione e regole d'uso.",
+  "version": "0.3.0",
+  "description": "Assistente Odoo di bwlab per Claude e Codex (ChatGPT): guida al collegamento con gli ambienti di test e produzione e regole d'uso.",
   "author": {
     "name": "bwlab",
     "email": "lmassa@bwlab.it"

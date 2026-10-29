@@ -33,9 +33,25 @@ claude mcp add --scope user --transport http odoo-produzione <indirizzo-produzio
 ```
 Poi in Claude scrive `/mcp`, sceglie il connettore e **Authenticate**: si apre il login di Odoo.
 
+**ChatGPT (sito o app, piani a pagamento)**
+1. **Impostazioni › App e connettori › Impostazioni avanzate**: attiva la **Modalità sviluppatore**. Nei piani Business, Enterprise ed Edu la abilita l'amministratore del workspace.
+2. **Crea app**: nome `odoo-test` (o `odoo-produzione`), indirizzo del relativo ambiente, accesso con **OAuth**.
+3. Si apre il login di Odoo: accede con le sue credenziali.
+4. Ripete per l'altro ambiente. In ogni chat attiva l'app dal pulsante **+**.
+
+**Codex (app ChatGPT desktop o terminale)**
+Fagli eseguire nel terminale, con l'indirizzo giusto:
+```
+codex mcp add odoo-test --url <indirizzo-test>
+codex mcp login odoo-test
+```
+e lo stesso con `odoo-produzione`. `login` apre il login di Odoo.
+
 **Cambiare un indirizzo**
 - Desktop: rimuovi il connettore da **Customize › Connectors** e aggiungilo di nuovo con lo stesso nome e il nuovo indirizzo, poi **Collega**.
 - Claude Code: `claude mcp remove --scope user odoo-test`, poi di nuovo `claude mcp add` come sopra.
+- ChatGPT: elimina l'app da **Impostazioni › App e connettori** e ricreala con lo stesso nome.
+- Codex: `codex mcp remove odoo-test`, poi di nuovo `codex mcp add` e `codex mcp login`.
 
 ## 2. Permessi (schermata di consenso)
 - Nella schermata c'è la casella **"Consenti di creare e modificare dati"**.
@@ -56,7 +72,7 @@ Se tutte vanno: collegamento completo. Ricorda all'utente che i dati di Odoo pas
 |---|---|
 | Login ok ma ogni richiesta dà 403 | L'utente non è nel gruppo "MCP User". Richiesta a bwlab. |
 | Errore 404 "No database is selected" | Problema del server. Richiesta a bwlab con l'errore esatto. |
-| 401 dopo un po' | Collegamento scaduto: rifai il login (Desktop: Customize › Connectors › Collega; Claude Code: `/mcp` › Authenticate). |
+| 401 dopo un po' | Collegamento scaduto: rifai il login (Desktop: Customize › Connectors › Collega; Claude Code: `/mcp` › Authenticate; ChatGPT: riconnetti l'app; Codex: `codex mcp login <nome>`). |
 | Il pulsante Collega è grigio | Piano Team/Enterprise: il connettore va aggiunto dal proprietario dell'organizzazione. Altrimenti aggiorna l'app o prova da claude.ai. |
 | Non vedi strumenti di scrittura | Hai dato il consenso in sola lettura. Ripeti il login lasciando la casella. |
 | "Troppe richieste" | Limite al minuto: aspetta qualche minuto. |
