@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Guida l'utente a completare il collegamento a Odoo (login, permessi, prova). Usala al primo avvio del plugin, quando l'utente scrive /odoo-assistant:setup, o quando dice che Odoo non risponde o non è collegato.
+description: Guida l'utente a completare il collegamento a Odoo (login, permessi, prova). Usala al primo avvio del plugin, quando l'utente scrive /odoo-assistant:setup (Claude), quando chiede di collegare o configurare Odoo (Claude o Codex), o quando dice che Odoo non risponde o non è collegato.
 ---
 
 # Inizializzazione del collegamento a Odoo
