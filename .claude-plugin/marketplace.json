@@ -10,7 +10,7 @@
     {
       "name": "odoo-assistant",
       "source": "./plugins/odoo-assistant",
-      "description": "Collega Claude a Odoo (MCP) con login Odoo, inizializzazione guidata e regole d'uso."
+      "description": "Collega Claude e Codex a Odoo (MCP) con login Odoo, inizializzazione guidata e regole d'uso."
     }
   ]
 }
